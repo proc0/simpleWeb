@@ -1,0 +1,61 @@
+name:                haskell-web-stack
+version:             0.1.0.0
+github:              "githubuser/haskell-web-stack"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2019 Author name here"
+
+extra-source-files:
+  - README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/haskell-web-stack#readme>
+
+ghc-options:
+  - -Wall
+  - -Wno-name-shadowing
+  - -Wcompat
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wredundant-constraints
+  - -Wnoncanonical-monad-instances
+  - -Wno-orphans
+
+dependencies:
+  - base >= 4.7 && < 5
+  - containers
+  - unordered-containers
+  - vector
+  - time
+  - text
+  - bytestring
+  - aeson
+  - configurator
+  - postgresql-simple
+  - resource-pool
+  - http-types
+  - fast-logger
+  - blaze-html
+  - Spock
+  - raw-strings-qq
+
+library:
+  source-dirs: src/lib
+
+executables:
+  server:
+    main: haskell-web-stack.hs
+    source-dirs: src/bin
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - haskell-web-stack

@@ -1,0 +1,24 @@
+.DS_Store
+*/.DS_Store
+*/**/.DS_Store
+# Stuff that shouldn't be committed no matter what.
+id_rsa
+*.pem
+
+# Terraform outputs.
+.terraform/
+.terraform-output/
+*.tfstate
+*.tfstate.backup
+
+# Build outputs.
+.stack-work/
+*.cabal
+node_modules/
+out/
+dist/
+
+# Editor temp files.
+*~
+\#*\#
+*.tmp

@@ -1,0 +1,19 @@
+{
+  "name": "haskell-web-stack-client",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {},
+  "author": "William Yao <williamyaoh@gmail.com>",
+  "license": "WTFPL",
+  "devDependencies": {
+    "npx": "^10.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "datejs": "^1.0.0-rc3",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15"
+  }
+}
